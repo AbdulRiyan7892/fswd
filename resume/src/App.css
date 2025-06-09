@@ -4,53 +4,73 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(to right, #f5f7fa, #c3cfe2);
   scroll-behavior: smooth;
+  color: #333;
 }
 
+/* Navigation Bar */
 nav {
   background-color: #4f46e5;
   padding: 1rem 2rem;
   position: sticky;
   top: 0;
-  color: white;
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   justify-content: space-between;
+  color: white;
   z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 nav h1 {
+  font-size: 1.8rem;
   margin: 0;
-  font-size: 1.5rem;
+  flex: 1;
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
   margin: 0;
   padding: 0;
+  flex: 2;
+  justify-content: flex-end;
 }
 
 nav li {
   cursor: pointer;
-  transition: opacity 0.3s;
+  font-weight: 500;
+  transition: transform 0.3s, opacity 0.3s;
 }
 
 nav li:hover {
-  opacity: 0.7;
+  opacity: 0.85;
+  transform: scale(1.05);
 }
 
+/* Section Styling */
 section {
   padding: 4rem 2rem;
-  max-width: 800px;
+  max-width: 900px;
   margin: auto;
-  text-align: center;
+  text-align: justify;
+  line-height: 1.6;
+  background-color: white;
+  border-radius: 16px;
+  margin-top: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
 }
 
 section h2 {
+  text-align: center;
   font-size: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  color: #4f46e5;
 }
 
+/* Resume Button */
 button {
   background-color: #4f46e5;
   color: white;
@@ -59,8 +79,33 @@ button {
   font-size: 1rem;
   border-radius: 8px;
   cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
   background-color: #4338ca;
+  transform: scale(1.05);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    justify-content: center;
+    width: 100%;
+    padding-top: 0.5rem;
+  }
+
+  section {
+    padding: 2rem 1rem;
+  }
+
+  nav h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
 }
