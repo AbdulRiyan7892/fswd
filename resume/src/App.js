@@ -17,6 +17,7 @@ function App() {
         <h1>Abdul Riyan</h1>
         <ul>
           <li onClick={() => scrollToSection('about')}>About</li>
+          <li onClick={() => scrollToSection('education')}>Education</li>
           <li onClick={() => scrollToSection('skills')}>Skills</li>
           <li onClick={() => scrollToSection('resume')}>Download Resume</li>
         </ul>
@@ -29,9 +30,17 @@ function App() {
         </p>
       </section>
 
+      <section id="education">
+        <h2>Educational Qualification</h2>
+        <p><strong>B.E.</strong> in Computer Science and Engineering</p>
+        <p>Malnad College of Engineering, Hassan — CGPA: 9.5 (Expected 2026)</p>
+      </section>
+
       <section id="skills">
         <h2>Skills</h2>
-        <p>C, Java, Python, HTML, JavaScript, ASM, Figma, MS Office, Linux, Windows</p>
+        <p>C, Java, Python, HTML, JavaScript, ASM</p>
+        <p>Figma, MS Word, PowerPoint</p>
+        <p>Operating Systems: Linux, Windows</p>
       </section>
 
       <section id="resume">
